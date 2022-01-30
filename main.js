@@ -28,11 +28,11 @@ async function d_import (url)
 	{
 		let str = url.replace("https://learndev-pro.github.io/VigyMat",'') ;
 		history.pushState({},'',url) ;
-		let module = await import(`https://learndev-pro.github.io/VigyMat${str}.js`) ;
+		let module = await import(`https://github.com/Learndev-pro/VigyMat/js${str}.js`) ;
 		render(module.html);
 	}catch(error)
 	{
-		app.innerHTML = `Sorry, Some error has occurred : ${error.text}` ;
+		app.innerHTML = `Sorry, Some error has occurred. ${error.name} : ${error.message}` ;
 	}
 
 }
