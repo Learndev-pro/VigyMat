@@ -4,7 +4,8 @@ function say_hello(){
 
 let html =
 	[
-		[ 'About' , `<p onclick="${say_hello()}">Hello world</p>`],
+		[ 'About' , `<p onclick="f['say_hello']()">Hello world</p>`],
 		[ 'something' , "hi"]
 	];
-export {html}
+let f = { 'say_hello' : say_hello() }
+export { html , f }

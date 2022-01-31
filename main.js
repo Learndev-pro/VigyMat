@@ -1,7 +1,7 @@
 // Variable declatations
 let app = document.getElementById('app') ;
 
-function render (arr)
+function render ( obj )
 {
 	arr.forEach( i => 
 		{
@@ -28,8 +28,8 @@ async function d_import (url)
 	{
 		let str = url.replace("https://learndev-pro.github.io/VigyMat",'') ;
 		history.pushState({},'',url) ;
-		let module = await import(`https://learndev-pro.github.io/VigyMat/js${str}.js`) ;
-		render(module.html);
+		let { module } = await import(`https://learndev-pro.github.io/VigyMat/js${str}.js`) ;
+		render( module.html );
 	}catch(error)
 	{
 		app.innerHTML = `Sorry, Some error has occurred. ${error.name} : ${error.message}` ;
