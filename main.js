@@ -57,4 +57,5 @@ function reload()
 }
 
 window.onpopstate = () => reload() ;
+window.onerror = () => app.innerHTML += `<p> ${error.name} : ${error.message} </p>`
 reload() ;
