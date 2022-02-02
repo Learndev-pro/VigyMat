@@ -28,11 +28,10 @@ async function d_import (url)
 	{
 		let str = url.replace("https://learndev-pro.github.io/VigyMat",'') ;
 		history.pushState({},'',url) ;
-		let module = await import(`https://raw.githubusercontent.com/Learndev-pro/VigyMat/main/js/Geometry/cube.js${str}.js`) ;
-		render( module.html );
+		import(`https://learndev-pro.github.io/VigyMat/js${str}.js`).then( module => render( module.html ) ) ;
 	}catch(error)
 	{
-		app.innerHTML = `Sorry, Some error has occurred. ${error.name} : ${error.message}` ;
+		app.innerHTML += `Sorry, Some error has occurred. ${error.name} : ${error.message}` ;
 	}
 
 }
