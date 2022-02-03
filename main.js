@@ -31,7 +31,7 @@ async function d_import (url)
 		import(`https://learndev-pro.github.io/VigyMat/js${str}.js`).then( module => render( module.html ) ) ;
 	}catch(error)
 	{
-		app.innerHTML += `Sorry, Some error has occurred. ${error.name} : ${error.message}` ;
+		app.innerHTML += `<b>Import error</b> => ${error.name} : ${error.message}` ;
 	}
 
 }
@@ -57,5 +57,4 @@ function reload()
 }
 
 window.onpopstate = () => reload() ;
-window.onerror = () => app.innerHTML += `<p> ${error.name} : ${error.message} </p>`
 reload() ;
