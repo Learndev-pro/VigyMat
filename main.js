@@ -1,7 +1,7 @@
 // Variable declatations
 let app = document.getElementById('app') ;
 
-function render ( obj )
+function render ( arr )
 {
 	arr.forEach( i => 
 		{
