@@ -1,5 +1,6 @@
 // Variable declatations
 let app = document.getElementById('app') ;
+let module , f ;
 
 function render ( arr )
 {
@@ -28,7 +29,12 @@ async function d_import (url)
 	{
 		let str = url.replace("https://learndev-pro.github.io/VigyMat",'') ;
 		history.pushState({},'',url) ;
-		import(`https://learndev-pro.github.io/VigyMat/js${str}.js`).then( module => render( module.html ) ) ;
+		import(`https://learndev-pro.github.io/VigyMat/js${str}.js`).then( m => 
+			{
+				module = m ;
+				render( m.html ) ;
+				f = m.f ;
+			} ) ;
 	}catch(error)
 	{
 		app.innerHTML += `<b>Import error</b> => ${error.name} : ${error.message}` ;

@@ -1,4 +1,4 @@
 let html = [
-	[ 'About' : "Hello World!" ]
+	[ 'About' , "Hello World!" ]
 ] ;
 export { html }
