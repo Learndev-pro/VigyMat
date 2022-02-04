@@ -6,20 +6,17 @@ function render ( arr )
 {
 	arr.forEach( i => 
 		{
-			i.forEach( j =>
-				{
-					let box = document.createElement('div') ;
-					let head = document.createElement('h3') ;
-					let content = document.createElement('div');
-					box.className = 'box';
-					head.className = 'heading' ;
-					content.className = 'content' ;
-					head.innerHTML = j[0] ;
-					content.innerHTML = j[1] ;
-					box.appendChild(head) ;
-					box.appendChild(content) ;
-					app.appendChild(box) ;
-				} );
+			let box = document.createElement('div') ;
+			let head = document.createElement('h3') ;
+			let content = document.createElement('div');
+			box.className = 'box';
+			head.className = 'heading' ;
+			content.className = 'content' ;
+			head.innerHTML = i[0] ;
+			content.innerHTML = i[1] ;
+			box.appendChild(head) ;
+			box.appendChild(content) ;
+			app.appendChild(box) ;
 		} ) ;
 }
 // Dynamic importing
@@ -29,6 +26,7 @@ async function d_import (url)
 	{
 		let str = url.replace("https://learndev-pro.github.io/VigyMat",'') ;
 		history.pushState({},'',url) ;
+		if (str == '/') str = '/index' ;
 		import(`https://learndev-pro.github.io/VigyMat/js${str}.js`).then( m => 
 			{
 				module = m ;
