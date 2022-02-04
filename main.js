@@ -14,8 +14,8 @@ function render ( arr )
 					box.className = 'box';
 					head.className = 'heading' ;
 					content.className = 'content' ;
-					head.innerHTML = obj[i][j][0] ;
-					content.innerHTML = obj[i][j][1] ;
+					head.innerHTML = j[0] ;
+					content.innerHTML = j[1] ;
 					box.appendChild(head) ;
 					box.appendChild(content) ;
 					app.appendChild(box) ;
