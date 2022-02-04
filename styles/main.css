@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Red+Hat+Mono:ital,wght@0,400;0,600;1,400&family=Roboto+Mono:wght@300&family=Ubuntu:wght@300&family=Zen+Antique&display=swap');
+#header {
+	display: block;
+	border-radius: 10px;
+	text-align: center;
+	text-shadow: 2px, 3px ,2px, lightblue;
+	background: linear-gradient(to right bottom, purple, lightblue);
+	border : 1px bold black;
+	padding-top: 6px;
+	padding-left: 10px;
+	padding-bottom: 6px;
+	font-family: 'Red Hat Mono', monospace;
+}
+#header .location_title {
+	color: skyblue;
+	text-align: left;
+}
+#header span {
+	color: blue;
+}
+#app .box {
+	background: linear-gradient(to right bottom, white, lightgrey);
+	border: 3px dashed #067bfd36;
+	padding-left: 8px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	word-wrap: break-word;
+	overflow: auto;
+	margin-top: 8px;
+	font-family: 'Roboto Mono', monospace;
+}
+#app .heading{
+	color: black;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 5px;
+	border-radius: 8px;
+	font-family: 'Montserrat', sans-serif;
+	background: linear-gradient(to right bottom, lightgrey, white);
+}
+#app .inputs{
+	font-family: 'Ubuntu', sans-serif;
+}
+#footer {
+	font-size: 10px;
+	color: #aaa;
+}
